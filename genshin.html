@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>should charlie play genshin?</title>
+<script>
+function decide(){
+	var yesno = Math.floor(Math.random() * 11);
+	if (yesno <= 8){
+		document.getElementById("idk").innerHTML = "yes"
+	} else{
+		document.getElementById("idk").innerHTML = "no"
+	}
+}
+</script>
+</head>
+<body>
+<h1>Should Charlie play genshin?</h1>
+<h4>press the button to find out!</h4>
+<h2 id="idk">---</h2>
+<button onclick="decide()">Decide!</button>
+</body>
+</html>

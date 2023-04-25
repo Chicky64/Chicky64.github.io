@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown to 8:25 AM on April 26, 2023</title>
+    <script>
+      // Define the target time for the countdown
+      var targetTime = new Date("April 26, 2023 08:25:00").getTime();
+      
+      // Update the countdown every second
+      var countdownInterval = setInterval(function() {
+        // Get the current time
+        var now = new Date().getTime();
+
+        // Calculate the time remaining
+        var timeRemaining = targetTime - now;
+
+        // Calculate the number of seconds remaining
+        var secondsRemaining = Math.floor(timeRemaining / 1000);
+
+        // Update the HTML with the number of seconds remaining
+        document.getElementById("countdown").innerHTML = secondsRemaining;
+
+        // If the countdown is over, stop updating and show a message
+        if (secondsRemaining <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "Countdown is over!";
+        }
+      }, 1000); // Run the interval every 1000ms (1 second)
+    </script>
+  </head>
+  <body>
+    <h1>Countdown to 8:25 AM on April 26, 2023</h1>
+    <p>Seconds remaining: <span id="countdown"></span></p>
+  </body>
+</html>
